@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "226544803257",
+    "project_id": "menu-maker-b7fba",
+    "storage_bucket": "menu-maker-b7fba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:226544803257:android:6faff2b0c8d2291191ea68",
+        "android_client_info": {
+          "package_name": "menu.customer.menu_maker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "226544803257-g339pikslhfgrclkt0gmklhcgk5o8eeh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtzYjFLmFpHpEKipf2vKlFKj6N-zq5sow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "226544803257-g339pikslhfgrclkt0gmklhcgk5o8eeh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "226544803257-u61tkb2aujrtqjpv9r48age3v1g53d8f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "menu.customer.menuMaker"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
