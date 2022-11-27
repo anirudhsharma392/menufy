@@ -84,12 +84,16 @@ class CustomTextField extends StatelessWidget {
   final String hintText;
   final String? labelText;
   final IconData icon;
+  final Widget? prefix;
+  final void Function(String)? onChange;
 
   const CustomTextField(
       {Key? key,
       this.hintText = "Enter your email",
       this.labelText = "Email",
-      this.icon = Icons.email})
+      this.icon = Icons.email,
+      this.prefix,
+      this.onChange})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -99,17 +103,20 @@ class CustomTextField extends StatelessWidget {
     );
     final Color _focusedColor = Theme.of(context).primaryColor;
     return TextField(
-      style: AppStyle.body1
-          .copyWith(color: _focusedColor),
+      style: AppStyle.body1.copyWith(color: _focusedColor),
+      keyboardType: TextInputType.phone,
+      maxLength: 11,
+      onChanged: onChange,
       decoration: InputDecoration(
           filled: true,
+          counterText: '',
           fillColor: AppColors.white,
+          prefix: prefix,
           suffixIcon: Icon(icon, color: AppColors.blackLightest),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: _focusedColor),
             borderRadius: BorderRadius.all(Radius.circular(AppStyle.radius)),
           ),
-
           labelText: labelText,
           enabledBorder: border,
           border: border,

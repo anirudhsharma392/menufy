@@ -31,10 +31,10 @@
               "client_type": 3
             },
             {
-              "client_id": "226544803257-u61tkb2aujrtqjpv9r48age3v1g53d8f.apps.googleusercontent.com",
+              "client_id": "226544803257-sknb1f6qnkd1id8i4p31vet4abfjm5qr.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "menu.customer.menuMaker"
+                "bundle_id": "menufy.partner.menufyPartner"
               }
             }
           ]
@@ -49,6 +49,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "226544803257-52e1p4ie8rb5tnsl78e6358dij78e4co.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "menufy.partner.menufy_partner",
+            "certificate_hash": "553386abc4bdf2d3dea20d064fdc4ccb7a514c71"
+          }
+        },
         {
           "client_id": "226544803257-g339pikslhfgrclkt0gmklhcgk5o8eeh.apps.googleusercontent.com",
           "client_type": 3
@@ -67,10 +75,10 @@
               "client_type": 3
             },
             {
-              "client_id": "226544803257-u61tkb2aujrtqjpv9r48age3v1g53d8f.apps.googleusercontent.com",
+              "client_id": "226544803257-sknb1f6qnkd1id8i4p31vet4abfjm5qr.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "menu.customer.menuMaker"
+                "bundle_id": "menufy.partner.menufyPartner"
               }
             }
           ]

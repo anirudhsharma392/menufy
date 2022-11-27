@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:menufy_partner/theme/theme.dart';
+import 'package:menufy_partner/utils/constants.dart';
+import 'package:menufy_partner/view/registeration/sign_in/sign_in_controller.dart';
 import 'package:menufy_partner/widgets/buttons.dart';
 import 'package:menufy_partner/widgets/common.dart';
 import 'package:menufy_partner/widgets/text_field.dart';
-import 'package:menufy_partner/utils/images.dart';
 
-class SignInPage extends StatelessWidget {
+class SignInPage extends GetView<SignInController> {
   static const route = '/sign_in';
   const SignInPage({Key? key}) : super(key: key);
 
@@ -18,126 +20,55 @@ class SignInPage extends StatelessWidget {
         padding: AppStyle.padding,
         child: Column(
           children: [
-            Space(
+            const Space(
               factor: 2,
             ),
             Container(
-              alignment: Alignment.centerLeft,
+              alignment: Alignment.center,
               child: Text(
-                "Hola,",
-                style: GoogleFonts.notoSans(
-                    fontSize: 32,
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.black),
+                Constants.appName,
+                style: AppStyle.jumboText.copyWith(fontStyle: FontStyle.italic),
               ),
             ),
-            Container(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Sign in to your account",
-                style: GoogleFonts.notoSans(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                    color: AppColors.black),
-              ),
-            ),
-            Space(factor: 2),
-            CustomTextField(
-              icon: Icons.mail_outline_rounded,
-            ),
-            Space(),
-            CustomTextField(
-              labelText: "Password",
-              icon: Icons.lock_outline_rounded,
-            ),
-            Space(factor: 3),
-            CustomButton(),
-            Space(
-              factor: 2,
-            ),
-            GestureDetector(
-              onTap: () {},
-              child: RichText(
-                text: const TextSpan(
-                  style: AppStyle.body1,
-                  children: <TextSpan>[
-                    TextSpan(
-                      text: 'Don\'t have an account? ',
-                    ),
-                    TextSpan(
-                        text: 'Sign up ',
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 16)),
-                  ],
-                ),
-              ),
-            ),
-            Space(factor: 3),
-            DividerText(),
-            Space(
+            const Space(
               factor: 3,
             ),
-            GoogleButton(),
+            Container(
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                "To register, please verify your phone number",
+                style: AppStyle.headLine2,
+              ),
+            ),
+            const Space(factor: 0.5),
+            Container(
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                "We will send you an OTP for verification",
+                style: AppStyle.subtitle2,
+              ),
+            ),
+            const Space(factor: 2),
+            CustomTextField(
+              icon: Icons.phone,
+              prefix: const Text('+91- '),
+              hintText: "(123) 456-789",
+              labelText: "Mobile number",
+              onChange: controller.onPhoneChange,
+            ),
+            const Space(factor: 3),
+            Obx(() => CustomButton(
+                  text: 'Send OTP',
+                  onTap: controller.isNextButtonActive.value
+                      ? controller.onSubmitPhoneNumber
+                      : null,
+                )),
+            const Space(
+              factor: 2,
+            ),
           ],
         ),
       )),
-    );
-  }
-}
-
-class GoogleButton extends StatelessWidget {
-  const GoogleButton({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 55,
-      decoration: BoxDecoration(
-        borderRadius: AppStyle.borderRadius,
-        border: Border.all(color: AppColors.blackLightest),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            AppImages.google,
-            height: 24,
-          ),
-          const SizedBox(width: 16),
-          Text("Login with google",
-              style: AppStyle.body1.copyWith(fontSize: 16))
-        ],
-      ),
-    );
-  }
-}
-
-class DividerText extends StatelessWidget {
-  const DividerText({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Flexible(
-          child: Container(
-            color: Theme.of(context).dividerColor,
-            height: 1,
-          ),
-        ),
-        const SizedBox(width: 16),
-        Text(
-          "Or",
-          style: AppStyle.body1,
-        ),
-        const SizedBox(width: 16),
-        Flexible(
-          child: Container(
-            color: Theme.of(context).dividerColor,
-            height: 1,
-          ),
-        ),
-      ],
     );
   }
 }

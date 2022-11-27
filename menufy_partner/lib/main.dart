@@ -27,7 +27,7 @@ _setupOrientation() {
   ]);
 }
 
-class MyApp extends GetView<CentralState> {
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
@@ -36,7 +36,7 @@ class MyApp extends GetView<CentralState> {
       title: "MENU",
       getPages: appPages,
       initialRoute: initialRoute,
-      theme: controller.appTheme,
+      theme: CentralState.appTheme,
       themeMode: ThemeMode.light,
       locale: const Locale('en', 'US'),
       fallbackLocale: const Locale('en', 'US'),

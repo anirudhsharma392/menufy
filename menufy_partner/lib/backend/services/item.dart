@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:menufy_partner/firebase/collections.dart';
+import 'package:menufy_partner/backend/collections.dart';
 import 'package:menufy_partner/model/item.dart';
 
 class AppointmentApi {

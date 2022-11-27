@@ -9,11 +9,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-
-
-
-
+      body: Text("Home screen"),
     );
   }
 }
@@ -24,12 +20,12 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 0),
+      margin: const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Text("McDonald's", style: AppStyle.headLine1),
+          const Text("McDonald's", style: AppStyle.headLine1),
           Image.network(
             'https://cdn-icons-png.flaticon.com/512/732/732217.png',
             height: 30,

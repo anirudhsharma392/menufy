@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -6,6 +7,10 @@ class AppStyle {
   static const padding = EdgeInsets.all(margin);
   static const horizontalPadding = EdgeInsets.symmetric(horizontal: margin);
   static const verticalPadding = EdgeInsets.symmetric(vertical: margin);
+
+  static TextStyle jumboText = GoogleFonts.openSans(
+      fontSize: 22, fontWeight: FontWeight.w900, color: AppColors.black);
+
   static const headLine1 = TextStyle(
       fontSize: 20, fontWeight: FontWeight.w600, color: AppColors.black);
 
@@ -27,7 +32,10 @@ class AppStyle {
       fontSize: 14, fontWeight: FontWeight.w300, color: AppColors.blackLight);
 
   static final buttonStyle = GoogleFonts.notoSans(
-      color: AppColors.white, fontSize: 16, fontWeight: FontWeight.w600);
+      color: AppColors.white,
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+      letterSpacing: 0.7);
 
   static const double radius = 10;
   static BorderRadius borderRadius = BorderRadius.circular(radius);
@@ -44,4 +52,9 @@ class AppColors {
   static const black = Colors.black87;
   static const blackLight = Color(0xffbfbfbf);
   static const blackLightest = Colors.black12;
+
+  static const error = CupertinoColors.systemRed;
+  static const success = CupertinoColors.activeGreen;
+  static const disabled = CupertinoColors.inactiveGray;
+  static const focus = CupertinoColors.activeBlue;
 }

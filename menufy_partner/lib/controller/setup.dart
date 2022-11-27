@@ -3,5 +3,5 @@ import 'package:menufy_partner/controller/central_state.dart';
 
 
 Future<void> setupState() async {
-  Get.lazyPut(() => CentralState(), fenix: true);
+  //Get.lazyPut(() => CentralState(), fenix: true);
 }
