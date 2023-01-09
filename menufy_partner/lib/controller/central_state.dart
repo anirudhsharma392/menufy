@@ -11,18 +11,22 @@ class CentralState extends BaseController {
 
   //dynamic app theme for the app
   static final appTheme = ThemeData.light().copyWith(
-    disabledColor: AppColors.disabled,
-    scaffoldBackgroundColor: AppColors.white,
-    splashColor: AppColors.white,
-    primaryColor: AppColors.black,
-    colorScheme: ThemeData()
-        .colorScheme
-        .copyWith(primary: AppColors.black, secondary: AppColors.blackLight),
-    textTheme: GoogleFonts.nunitoTextTheme(),
-    textSelectionTheme: const TextSelectionThemeData(
-      cursorColor: AppColors.black,
-      selectionColor: AppColors.blackLight,
-      selectionHandleColor: AppColors.blackLight,
-    ),
-  );
+      disabledColor: AppColors.disabled,
+      scaffoldBackgroundColor: AppColors.white,
+      splashColor: AppColors.white,
+      primaryColor: AppColors.black,
+      colorScheme: ThemeData()
+          .colorScheme
+          .copyWith(primary: AppColors.black, secondary: AppColors.blackLight),
+      textTheme: GoogleFonts.nunitoTextTheme(),
+      textSelectionTheme: const TextSelectionThemeData(
+        cursorColor: AppColors.black,
+        selectionColor: AppColors.blackLight,
+        selectionHandleColor: AppColors.blackLight,
+      ),canvasColor: AppColors.white,
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        unselectedLabelStyle: AppStyle.subtitle2.copyWith(fontSize: 12),
+        selectedItemColor: AppColors.black,
+        unselectedItemColor: AppColors.disabled,
+      ));
 }

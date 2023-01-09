@@ -46,7 +46,7 @@ class OTPPage extends GetView<SignInController> {
             Container(
               alignment: Alignment.centerLeft,
               child: const Text(
-                "A 6 digit code has been sent to 9555719966",
+                "A 6 digit code has been sent to your phone number",
                 style: AppStyle.subtitle2,
               ),
             ),
