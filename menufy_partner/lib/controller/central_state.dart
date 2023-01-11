@@ -18,12 +18,13 @@ class CentralState extends BaseController {
       colorScheme: ThemeData()
           .colorScheme
           .copyWith(primary: AppColors.black, secondary: AppColors.blackLight),
-      textTheme: GoogleFonts.nunitoTextTheme(),
+      textTheme: AppStyle.textTheme,
       textSelectionTheme: const TextSelectionThemeData(
         cursorColor: AppColors.black,
         selectionColor: AppColors.blackLight,
         selectionHandleColor: AppColors.blackLight,
-      ),canvasColor: AppColors.white,
+      ),
+      canvasColor: AppColors.white,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         unselectedLabelStyle: AppStyle.subtitle2.copyWith(fontSize: 12),
         selectedItemColor: AppColors.black,

@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:menufy_partner/view/home/home_binding.dart';
-import 'package:menufy_partner/view/home/home_page.dart';
+import 'package:menufy_partner/view/home/home_view/home_page.dart';
 import 'package:menufy_partner/view/registeration/sign_in/otp_page.dart';
 import 'package:menufy_partner/view/registeration/sign_in/sign_in_binding.dart';
 import 'package:menufy_partner/view/registeration/sign_in/sign_in_page.dart';

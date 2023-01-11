@@ -5,7 +5,7 @@ import 'package:menufy_partner/controller/base_controller.dart';
 import 'package:menufy_partner/controller/central_state.dart';
 import 'package:menufy_partner/utils/auth.dart';
 import 'package:menufy_partner/utils/exceptions.dart';
-import 'package:menufy_partner/view/home/home_page.dart';
+import 'package:menufy_partner/view/home/home_view/home_page.dart';
 import 'package:menufy_partner/view/registeration/sign_in/otp_page.dart';
 
 class SignInController extends BaseController {

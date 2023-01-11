@@ -1,9 +1,16 @@
+import 'dart:math';
+
+import 'package:animated_toggle_switch/animated_toggle_switch.dart';
 import 'package:fluid_bottom_nav_bar/fluid_bottom_nav_bar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:menufy_partner/generated/assets.dart';
 import 'package:menufy_partner/theme/theme.dart';
 import 'package:menufy_partner/view/home/home_controller.dart';
+import 'package:menufy_partner/view/home/home_view/app_bar.dart';
+import 'package:menufy_partner/view/home/home_view/order_card.dart';
+import 'package:menufy_partner/widgets/common.dart';
 
 class HomePage extends GetView<HomeController> {
   static const route = '/home';
@@ -12,7 +19,8 @@ class HomePage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: const Text("Home screen"),
+        backgroundColor: AppColors.backgroundColor,
+        body: const Body(),
         bottomNavigationBar: Obx(
           () => BottomNavigationBar(
             items: <BottomNavigationBarItem>[
@@ -43,44 +51,41 @@ class HomePage extends GetView<HomeController> {
 
   BottomNavigationBarItem _getNavBarItem(image, label) =>
       BottomNavigationBarItem(
-        icon: Padding(
-          padding: const EdgeInsets.all(2),
-          child: Image.asset(
-            image,
-            height: 24,
-            color: AppColors.disabled,
+          icon: Padding(
+            padding: const EdgeInsets.all(2),
+            child: Image.asset(
+              image,
+              height: 24,
+              color: AppColors.disabled,
+            ),
           ),
-        ),
-        activeIcon: Padding(
-          padding:const EdgeInsets.all(2),
-          child: Image.asset(
-            image,
-            height: 24,
-            color: AppColors.black,
+          activeIcon: Padding(
+            padding: const EdgeInsets.all(2),
+            child: Image.asset(
+              image,
+              height: 24,
+              color: AppColors.black,
+            ),
           ),
-        ),
-        label: label,backgroundColor: Colors.red
-      );
+          label: label,
+          backgroundColor: Colors.red);
 }
 
-class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({Key? key}) : super(key: key);
+class Body extends StatelessWidget {
+  const Body({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          const Text("McDonald's", style: AppStyle.headLine1),
-          Image.network(
-            'https://cdn-icons-png.flaticon.com/512/732/732217.png',
-            height: 30,
-          )
-        ],
-      ),
+    return Column(
+      children: [
+        OrderAppBar(),
+        Expanded(
+          child: ListView.builder(
+              padding: EdgeInsets.zero,
+              shrinkWrap: true,
+              itemBuilder: (bc, i) => OrderCard()),
+        )
+      ],
     );
   }
 }

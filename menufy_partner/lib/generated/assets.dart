@@ -5,8 +5,10 @@ class Assets {
   static const String iconsHistory = 'assets/icons/history.png';
   static const String iconsInsight = 'assets/icons/insight.png';
   static const String iconsMenu = 'assets/icons/menu.png';
+  static const String iconsNonVeg = 'assets/icons/non_veg.png';
   static const String iconsOrders = 'assets/icons/orders.png';
   static const String iconsSetting = 'assets/icons/setting.png';
+  static const String iconsVeg = 'assets/icons/veg.png';
   static const String imagesGoogle = 'assets/images/google.png';
 
 }

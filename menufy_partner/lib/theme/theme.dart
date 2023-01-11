@@ -45,6 +45,17 @@ class AppStyle {
     spreadRadius: 0.1,
     blurRadius: 5,
   );
+  static get textTheme => TextTheme(
+    headline1: headLine1,
+    headline2: headLine2,
+    headline3: headLine3,
+    subtitle1: subtitle1,
+    subtitle2: subtitle2,
+    bodyText1: body1,
+    bodyText2: body2,
+    button: buttonStyle,
+
+  );
 }
 
 class AppColors {
@@ -52,7 +63,7 @@ class AppColors {
   static const black = Colors.black87;
   static const blackLight = Color(0xffbfbfbf);
   static const blackLightest = Colors.black12;
-
+  static const backgroundColor = Color(0xffF4F4F4);
   static const error = CupertinoColors.systemRed;
   static const success = CupertinoColors.activeGreen;
   static const disabled = CupertinoColors.inactiveGray;
